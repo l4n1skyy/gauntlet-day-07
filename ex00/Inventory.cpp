@@ -16,8 +16,9 @@ void Inventory::remove(const std::string &item)
 
 bool Inventory::has(const std::string &item) const
 {
-	return std::find(m_items.begin(), m_items.end(), item) == m_items.end();
-	// return std::find(m_items.begin(), m_items.end(), item) != m_items.end();
+	// Test 2
+	// return std::find(m_items.begin(), m_items.end(), item) == m_items.end();
+	return std::find(m_items.begin(), m_items.end(), item) != m_items.end();
 }
 
 int Inventory::count() const
