@@ -22,6 +22,5 @@ bool Inventory::has(const std::string &item) const
 
 int Inventory::count() const
 {
-	// return static_cast<int>(m_items.size());
-	return 0;
+	return static_cast<int>(m_items.size());
 }
