@@ -12,12 +12,12 @@ void Inventory::remove(const std::string &item)
 	auto it = std::find(m_items.begin(), m_items.end(), item);
 	if (it != m_items.end())
 		m_items.erase(it);
-	// if not found, no-op — nothing to do
 }
 
 bool Inventory::has(const std::string &item) const
 {
-	return std::find(m_items.begin(), m_items.end(), item) != m_items.end();
+	return std::find(m_items.begin(), m_items.end(), item) == m_items.end();
+	// return std::find(m_items.begin(), m_items.end(), item) != m_items.end();
 }
 
 int Inventory::count() const
