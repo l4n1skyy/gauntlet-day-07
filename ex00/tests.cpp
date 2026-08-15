@@ -16,7 +16,6 @@ TEST_CASE("has finds an added item and rejects a missing one")
 	CHECK_FALSE(inv.has("test2"));
 }
 
-/*
 TEST_CASE("removing an item drops the count and has stops finding it")
 {
 	Inventory inv;
@@ -26,6 +25,7 @@ TEST_CASE("removing an item drops the count and has stops finding it")
 	CHECK_FALSE(inv.has("test"));
 }
 
+/*
 TEST_CASE("removing a missing item is a no-op")
 {
 	Inventory inv;

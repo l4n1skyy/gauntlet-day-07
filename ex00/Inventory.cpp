@@ -10,7 +10,8 @@ void Inventory::add(const std::string &item)
 void Inventory::remove(const std::string &item)
 {
 	auto it = std::find(m_items.begin(), m_items.end(), item);
-	if (it != m_items.end())
+	// if (it != m_items.end())
+	if (it == m_items.end())
 		m_items.erase(it);
 }
 
@@ -23,5 +24,7 @@ bool Inventory::has(const std::string &item) const
 
 int Inventory::count() const
 {
+	// Test 1
+	// return 0;
 	return static_cast<int>(m_items.size());
 }
