@@ -9,10 +9,15 @@ void Inventory::add(const std::string &item)
 
 void Inventory::remove(const std::string &item)
 {
-	auto it = std::find(m_items.begin(), m_items.end(), item);
-	// if (it == m_items.end())
-	if (it != m_items.end())
-		m_items.erase(it);
+	for (auto it = m_items.begin(); it != m_items.end(); ++it)
+	{
+		// Test 3 & 4
+		if (*it != item)
+		{
+			m_items.erase(it);
+			return;
+		}
+	}
 }
 
 bool Inventory::has(const std::string &item) const
