@@ -12,7 +12,8 @@ void Inventory::remove(const std::string &item)
 	for (auto it = m_items.begin(); it != m_items.end(); ++it)
 	{
 		// Test 3 & 4
-		if (*it != item)
+		// if (*it != item)
+		if (*it == item)
 		{
 			m_items.erase(it);
 			return;
